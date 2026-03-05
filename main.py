@@ -61,7 +61,6 @@ def contour_percentiles(fits_cutout_path, ax, **kwargs):
         colors='white', linewidths=0.8,alpha=0.5
     )
 
-# In[2]:
 
 
 def read_csv(filepath):
@@ -160,8 +159,7 @@ else:
     print(len(combined_cat_old), 'found sources 0.2<=z<=0.8 in Clews et al 2025 FRIs and old env cat')
     print(len(combined_cat_new), 'found sources 0.2<=z<=0.8 in Clews et al 2025 FRIs and new env cat')
     
-    
-    #find sources only in NEW catalogue
+
     env_diff = env_catalogue_new.merge(
         env_catalogue_old[['Source_Name']].drop_duplicates(),
         on='Source_Name',
